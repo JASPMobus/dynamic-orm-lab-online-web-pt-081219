@@ -62,10 +62,10 @@ class InteractiveRecord
   end
   
   def self.find_by(attrs)
-    sql = "SELECT * FROM #{self.table_name} WHERE "
+    sql = "SELECT * FROM #{self.table_name} WHERE #{attrs.keys.first} = ?"
     
     attrs.each do |key, val|
-      sql = "#{sql}#{key} = ? AND "
+      sql = "#{sql} AND "
     end
     
     5.times { sql[-1] = "" }
