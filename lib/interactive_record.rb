@@ -67,5 +67,7 @@ class InteractiveRecord
     attrs.each do |key, val|
       sql = "#{sql}#{key.to_s}"
     end
+    
+    
   end
 end
