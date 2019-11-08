@@ -68,6 +68,6 @@ class InteractiveRecord
       sql = "#{sql}#{key.to_s}"
     end
     
-    
+    5.times { sql[-1] = "" }
   end
 end
