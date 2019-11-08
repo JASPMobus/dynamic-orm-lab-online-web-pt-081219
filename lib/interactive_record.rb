@@ -69,5 +69,7 @@ class InteractiveRecord
     end
     
     5.times { sql[-1] = "" }
+    
+    sql
   end
 end
