@@ -65,7 +65,7 @@ class InteractiveRecord
     sql = "SELECT * FROM #{self.table_name} WHERE "
     
     attrs.each do |key, val|
-      sql = "#{sql}#{key.to_s}"
+      sql = "#{sql}#{key} AND "
     end
     
     5.times { sql[-1] = "" }
