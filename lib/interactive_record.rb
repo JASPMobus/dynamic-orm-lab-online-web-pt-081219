@@ -61,15 +61,10 @@ class InteractiveRecord
     DB[:conn].execute(sql, name)
   end
   
-  def self.find_by(attrs)
-    sql = "SELECT * FROM #{self.table_name} WHERE #{attrs.keys.first} = ?"
+  def self.find_by(an_attr)
+    which = an_attr.keys.first
+    sql = "SELECT * FROM #{self.table_name} WHERE #{which} = ?"
     
-    attrs.each do |key, val|
-      sql = "#{sql} AND "
-    end
-    
-    5.times { sql[-1] = "" }
-    
-    sql
+    DB[:conn].execute()
   end
 end
