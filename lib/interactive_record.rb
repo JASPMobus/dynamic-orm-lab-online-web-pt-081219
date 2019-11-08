@@ -65,6 +65,6 @@ class InteractiveRecord
     which = an_attr.keys.first
     sql = "SELECT * FROM #{self.table_name} WHERE #{which} = ?"
     
-    DB[:conn].execute()
+    DB[:conn].execute(sql, an_attr[which])
   end
 end
