@@ -68,8 +68,6 @@ class InteractiveRecord
       sql = "#{sql}#{key} AND "
     end
     
-    5.times { sql[-1] = "" }
-    
     sql
   end
 end
